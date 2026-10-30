@@ -1,0 +1,46 @@
+<div class="connection">
+    <div class="orb" id="orb">
+      <div class="orb-inner">
+        <span id="power">⏻</span>
+        <small id="connectionText">ОТКЛЮЧЕНО</small>
+      </div>
+    </div>
+    <button id="connectBtn">ПОДКЛЮЧИТЬСЯ</button>
+  </div>
+
+  <div class="server-box">
+    <label for="server">ВЫБЕРИ СЕРВЕР</label>
+    <select id="server">
+      <option>Германия</option>
+      <option>Нидерланды</option>
+      <option>Финляндия</option>
+      <option>Франция</option>
+    </select>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>Состояние</h2>
+  <div class="info">
+    <span>Протокол</span><b>WireGuard · планируется</b>
+  </div>
+  <div class="info">
+    <span>Сервер</span><b id="serverName">Германия</b>
+  </div>
+  <div class="info">
+    <span>Подключение</span><b id="status">Не активно</b>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>Семейный доступ</h2>
+  <div id="family"></div>
+</section>
+
+<section class="panel">
+  <h2>Админ-панель</h2>
+  <p class="muted">Управление семейными профилями</p>
+  <input id="memberName" placeholder="Имя участника">
+  <button id="addMember">ДОБАВИТЬ УЧАСТНИКА</button>
+  <p class="muted" id="adminMessage"></p>
+</section>
