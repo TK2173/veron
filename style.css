@@ -1,0 +1,38 @@
+{ margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #080808; color: #eeeeee; font-family: Arial, sans-serif; min-height: 100vh; padding: 20px; }
+.header { display: flex; justify-content: space-between; align-items: center; max-width: 850px; margin: 10px auto 65px; }
+.logo { font-size: 27px; font-weight: 900; letter-spacing: 4px; color: #ffffff; }
+.logo span { color: #999999; }
+.status { color: #888888; font-size: 10px; letter-spacing: 2px; }
+main { max-width: 850px; margin: auto; }
+.dashboard { text-align: center; padding: 20px 10px 45px; }
+.eyebrow { color: #888888; letter-spacing: 4px; font-size: 11px; margin-bottom: 20px; }
+h1 { font-size: clamp(36px, 8vw, 58px); line-height: 1.15; margin-bottom: 35px; }
+h1 span { color: #888888; }
+.connection { display: flex; flex-direction: column; align-items: center; gap: 25px; margin: 35px 0; }
+.orb { width: 190px; height: 190px; border-radius: 50%; border: 1px solid #555555; background: radial-gradient(circle, #303030, #111111 65%); display: grid; place-items: center; box-shadow: 0 0 45px #222222; transition: .3s; }
+.orb.connected { border-color: #cccccc; box-shadow: 0 0 45px #777777; }
+.orb-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+#power { font-size: 55px; }
+.orb small { font-size: 10px; letter-spacing: 2px; }
+button { background: linear-gradient(135deg, #eeeeee, #999999); border: none; color: #080808; padding: 15px 28px; border-radius: 7px; font-weight: bold; letter-spacing: 1px; cursor: pointer; }
+button:active { transform: scale(.97); }
+.server-box { max-width: 320px; margin: 30px auto 0; text-align: left; }
+label { display: block; font-size: 10px; color: #888888; letter-spacing: 2px; margin-bottom: 10px; }
+select, input { width: 100%; padding: 15px; border: 1px solid #333333; border-radius: 7px; background: #151515; color: white; outline: none; }
+.panel { background: #111111; border: 1px solid #292929; border-radius: 13px; padding: 23px; margin: 20px 0; }
+h2 { font-size: 18px; margin-bottom: 20px; }
+.info { display: flex; justify-content: space-between; gap: 15px; padding: 14px 0; border-bottom: 1px solid #292929; font-size: 13px; }
+.info span, .muted { color: #888888; }
+.info b { text-align: right; font-size: 12px; }
+.member { display: flex; justify-content: space-between; align-items: center; padding: 13px 0; border-bottom: 1px solid #292929; gap: 10px; }
+.member span:last-child { color: #aaaaaa; font-size: 12px; }
+.panel input { margin: 10px 0; }
+.panel button { width: 100%; margin-top: 8px; }
+.muted { font-size: 12px; line-height: 1.6; }
+footer { text-align: center; color: #555555; font-size: 10px; letter-spacing: 2px; padding: 45px 10px 20px; }
+@media (max-width: 480px) { body { padding: 15px; }
+.header { margin-bottom: 45px; }
+.status { font-size: 8px; }
+.panel { padding: 18px; }
+.orb { width: 170px; height: 170px; } }
