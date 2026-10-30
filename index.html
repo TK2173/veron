@@ -1,46 +1,102 @@
-<div class="connection">
-    <div class="orb" id="orb">
-      <div class="orb-inner">
-        <span id="power">⏻</span>
-        <small id="connectionText">ОТКЛЮЧЕНО</small>
+<section class="hero">
+  <div class="eyebrow">PRIVATE FAMILY NETWORK</div>
+  <h1>Твоя сеть.<br><span>Твои правила.</span></h1>
+  <p class="subtitle">Защищённое пространство для своих.</p>
+
+  <div class="connection-area">
+    <div class="connection-ring" id="connectionRing">
+      <div class="connection-button" id="connectButton">
+        <span class="power-icon">⏻</span>
+        <span class="connection-label" id="connectionLabel">
+          ОТКЛЮЧЕНО
+        </span>
       </div>
     </div>
-    <button id="connectBtn">ПОДКЛЮЧИТЬСЯ</button>
+    <div class="connection-caption" id="connectionCaption">
+      Нажми, чтобы начать
+    </div>
   </div>
 
-  <div class="server-box">
-    <label for="server">ВЫБЕРИ СЕРВЕР</label>
-    <select id="server">
-      <option>Германия</option>
-      <option>Нидерланды</option>
-      <option>Финляндия</option>
-      <option>Франция</option>
-    </select>
+  <div class="server-card">
+    <div class="server-heading">
+      <span>ВЫБРАННЫЙ СЕРВЕР</span>
+      <span class="server-indicator">● ДОСТУПЕН В ДЕМО</span>
+    </div>
+    <div class="server-select-wrap">
+      <span class="server-flag" id="serverFlag">🇩🇪</span>
+      <select id="serverSelect">
+        <option value="Германия" data-flag="🇩🇪">Германия</option>
+        <option value="Нидерланды" data-flag="🇳🇱">Нидерланды</option>
+        <option value="Финляндия" data-flag="🇫🇮">Финляндия</option>
+        <option value="Франция" data-flag="🇫🇷">Франция</option>
+      </select>
+      <span class="select-arrow">⌄</span>
+    </div>
   </div>
 </section>
 
-<section class="panel">
-  <h2>Состояние</h2>
-  <div class="info">
-    <span>Протокол</span><b>WireGuard · планируется</b>
+<section class="content-section" id="servers">
+  <div class="section-heading">
+    <div>
+      <div class="eyebrow">NETWORK</div>
+      <h2>Состояние сети</h2>
+    </div>
+    <span class="section-number">01</span>
   </div>
-  <div class="info">
-    <span>Сервер</span><b id="serverName">Германия</b>
-  </div>
-  <div class="info">
-    <span>Подключение</span><b id="status">Не активно</b>
+
+  <div class="stats-grid">
+    <article class="stat-card">
+      <span class="stat-label">СЕРВЕР</span>
+      <strong id="serverName">Германия</strong>
+      <span class="stat-foot">Выбранная локация</span>
+    </article>
+    <article class="stat-card">
+      <span class="stat-label">СОСТОЯНИЕ</span>
+      <strong id="statusText">Offline</strong>
+      <span class="stat-foot">Статус интерфейса</span>
+    </article>
+    <article class="stat-card">
+      <span class="stat-label">ПРОТОКОЛ</span>
+      <strong>WireGuard</strong>
+      <span class="stat-foot">Планируемая технология</span>
+    </article>
+    <article class="stat-card">
+      <span class="stat-label">УЧАСТНИКИ</span>
+      <strong id="memberCount">4</strong>
+      <span class="stat-foot">Семейные профили</span>
+    </article>
   </div>
 </section>
 
-<section class="panel">
-  <h2>Семейный доступ</h2>
-  <div id="family"></div>
+<section class="content-section" id="family">
+  <div class="section-heading">
+    <div>
+      <div class="eyebrow">PRIVATE ACCESS</div>
+      <h2>Семейный доступ</h2>
+    </div>
+    <span class="section-number">02</span>
+  </div>
+
+  <div class="family-card" id="familyList"></div>
 </section>
 
-<section class="panel">
-  <h2>Админ-панель</h2>
-  <p class="muted">Управление семейными профилями</p>
-  <input id="memberName" placeholder="Имя участника">
-  <button id="addMember">ДОБАВИТЬ УЧАСТНИКА</button>
-  <p class="muted" id="adminMessage"></p>
+<section class="content-section" id="admin">
+  <div class="section-heading">
+    <div>
+      <div class="eyebrow">CONTROL CENTER</div>
+      <h2>Управление</h2>
+    </div>
+    <span class="section-number">03</span>
+  </div>
+
+  <div class="admin-card">
+    <div class="admin-title">Панель владельца</div>
+    <p>Управление семейными профилями.</p>
+    <input id="memberInput" type="text" maxlength="24"
+      placeholder="Имя нового участника">
+    <button class="add-button" id="addMemberButton">
+      + ДОБАВИТЬ УЧАСТНИКА
+    </button>
+    <div class="admin-message" id="adminMessage"></div>
+  </div>
 </section>
